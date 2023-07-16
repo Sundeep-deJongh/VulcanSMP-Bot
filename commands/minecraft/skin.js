@@ -8,7 +8,7 @@ module.exports = {
         .setDescription('Haal de skin van een speler op.')
         .addStringOption(option =>
             option.setName('user')
-                .setDescription('De minecraft naam van de skin die je wilt ophalen')
+                .setDescription('De minecraft naam van de skin die je wilt ophalen.')
                 .setRequired(true)
         ),
 
