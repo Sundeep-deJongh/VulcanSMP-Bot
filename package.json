@@ -4,7 +4,7 @@
   "description": "VulcanSMP discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "none",
+    "test": "node .",
     "start": "nodemon"
   },
   "repository": {
