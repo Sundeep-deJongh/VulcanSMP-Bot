@@ -1,5 +1,6 @@
 const { Client, GatewayIntentBits, Collection, Partials } = require ('discord.js');
 const dotenv = require('dotenv');
+const discordModals = require('discord-modals');
 
 const { loadEvents } = require('./handlers/eventsHandler');
 const { loadCommands } = require('./handlers/commandsHandler');
@@ -31,6 +32,8 @@ const client = new Client({
 });
 
 require('dotenv').config();
+
+discordModals(client);
 
 client.commands = new Collection();
 
