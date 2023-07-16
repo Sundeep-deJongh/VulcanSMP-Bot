@@ -27,8 +27,8 @@ function loadEvents(client) {
             continue;
         }
     }
-
-    return console.log(`Loaded events successfully!`);
+    
+     return console.log(`Loaded events Succesfully!`);
 }
 
 function getDirectories(path) {

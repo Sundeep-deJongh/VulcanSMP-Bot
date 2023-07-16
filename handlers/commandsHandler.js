@@ -33,6 +33,9 @@ function loadCommands(client) {
     
     developerGuild.commands.set(developersArray);
 
+    return console.log(`Loaded commands Succesfully!`);
+
+
 };
 
 module.exports = { loadCommands };
