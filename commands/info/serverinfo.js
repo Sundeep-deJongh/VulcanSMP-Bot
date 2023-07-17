@@ -11,8 +11,8 @@ module.exports = {
     async execute(interaction) {
 
         let embed = new EmbedBuilder()
-        .setAuthor({ name: "Server informatie", iconURL: config.default.logo })
-        .setThumbnail(config.default.logo)
+        .setAuthor({ name: "Server informatie", iconURL: process.env.BOT_LOGO })
+        .setThumbnail(process.env.BOT_LOGO)
         .setDescription(`
             **Naam:** *${interaction.guild.name}*
             **ID:** *${interaction.guild.id}*
