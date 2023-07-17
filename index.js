@@ -1,6 +1,7 @@
-const { Client, GatewayIntentBits, Collection, Partials } = require ('discord.js');
+const { Client, GatewayIntentBits, Collection, Partials, ActivityType } = require ('discord.js');
 const dotenv = require('dotenv');
 const discordModals = require('discord-modals');
+const { status } = require('minecraft-server-util');
 
 const { loadEvents } = require('./handlers/eventsHandler');
 const { loadCommands } = require('./handlers/commandsHandler');
@@ -31,6 +32,27 @@ const client = new Client({
     ]
 });
 
+client.on("ready", () => {
+	const activities = [
+		{ name: `play.vulcansmp.nl`, type: ActivityType.Watching },
+	];
+	const status = [
+		'dnd',
+	];
+	let i = 0;
+	setInterval(() => {
+		if(i >= activities.length) i = 0
+		client.user.setActivity(activities[i])
+		i++;
+	}, 5000);
+
+	let s = 0;
+	setInterval(() => {
+		if(s >= activities.length) s = 0
+		client.user.setStatus(status[s])
+		s++;
+	}, 5000);
+});
 require('dotenv').config();
 
 discordModals(client);
