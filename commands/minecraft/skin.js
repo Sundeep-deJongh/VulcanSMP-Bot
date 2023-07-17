@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmebedBuilder, CommandInteraction, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, CommandInteraction, EmbedBuilder } = require('discord.js');
 const dotenv = require('dotenv');
 const axios = require('axios');
 
